@@ -1,0 +1,62 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    long n = get_long("Number: ");
+
+    int sum1 = 0 , sum2 = 0 , total = 0;
+    long temp = n;
+    int pos = 0;
+
+    while (temp > 0)
+    {
+        int digit = temp % 10;
+
+        if (pos % 2 == 1)
+        {
+            int doubled = digit * 2;
+            sum1 += (doubled % 10) + (doubled / 10);
+
+        }
+        else {
+            sum2 += digit;
+        }
+
+        temp /= 10;
+        pos++;
+
+    }
+
+    total = sum1 + sum2;
+
+    if (total % 10 != 0)
+    {
+        printf("INVALID\n");
+        return 0;
+    }
+
+    // TO check card type
+    long first2 = n;
+    while (first2 >= 100)
+    first2 /= 10;
+
+    long first1 = first2 /10;
+    int len = 0;
+    long copy = n;
+    while (copy > 0)
+    {
+        len++;
+        copy /= 10;
+    }
+
+
+    if ((first2 == 34 || first2 == 37) && len == 15)
+        printf("AMEX\n");
+    else if ((first2 >= 51 && first2 <= 55) && len == 16)
+        printf("MASTERCARD\n");
+    else if (first1 == 4 && (len == 13 || len == 16))
+        printf("VISA\n");
+    else
+        printf("INVALID\n");
+}
