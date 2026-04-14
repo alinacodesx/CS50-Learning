@@ -23,10 +23,6 @@ This repository is a dedicated space for my progress through Harvard's CS50x. He
 
 ---
 
-## 📂 Repository Structure
-- `Week1-C/`: Assignments and code examples using C.
-- `Notes/`: My handwritten and digital summaries of every lecture.
-- `Projects/`: Major problem sets like Mario, Cash, and Credit.
 
 ## 🛠️ Tech Stack & Tools
 - **Language:** C , C++ , Python 
@@ -36,3 +32,4 @@ This repository is a dedicated space for my progress through Harvard's CS50x. He
 
 ---
 *“Computer science is not about machines, in the same way that astronomy is not about telescopes.”*
+*"Developing computational thinking is a skill"*
